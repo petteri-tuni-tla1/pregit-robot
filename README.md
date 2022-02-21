@@ -1,9 +1,19 @@
 
 # Introduction
 
-Use Robot for testing Linus Git or home made Pregit, command line tool
+Use Robot for testing Linus Git or home made Pregit, command line tool.
 
-## Set up the environment
+## Outline
+
+It first sets up test environment by creating temporary directory for testing (.tmp/...). 
+
+Then initializes repo and tests that repo (.git) was created.
+
+# Technical instructions
+
+Here virtual environment used, not necessary however.
+
+## Installation and test first run
 
 Install python3.
 
@@ -25,9 +35,26 @@ Install robot to venv:
  pip install robotframework
  robot --version
 ``` 
-Run robot test:
+Clone the repo and run test:
 ``` 
- robot TestSuite.robot 
+ git clone <repo url>
+ cd <repo name>
+ robot t2.robot
+``` 
+
+## Running test later
+
+When the setup is there and repo cloned only activating venv and running test is needed.
+
+1) Activate tutor1 venv
+``` 
+ cd <where ever this is>/tutor1/
+ source bin/activate
+ cd <repo name>
+``` 
+2) Run test
+ ``` 
+ robot t2.robot
 ``` 
 
 # Links
@@ -37,5 +64,6 @@ Run robot test:
 * https://robotframework.org/?tab=builtin#resources
 * https://robotframework.org/robotframework/latest/libraries/OperatingSystem.html
 * https://robotframework.org/robotframework/latest/libraries/BuiltIn.html
+* https://github.com/petteri-tuni-tla1/pregit-robot
 
 
